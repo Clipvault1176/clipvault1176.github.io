@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClipVault</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Literata:opsz,wght@7..72,400;7..72,600&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+/* Layout: a single narrow reading column, like a film-vault index card: masthead, what we post, then the policy documents. Dark-first. */
+:root {
+  --bg: #0f1013; --surface: #17181d; --fg: #e9e6df; --muted: #9a978f; --line: #2a2b31; --accent: #d9b44a;
+  --display: "Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+  --body: "Literata", Georgia, "Times New Roman", serif;
+  --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) {
+  --bg: #f6f4ef; --surface: #ece9e1; --fg: #1b1b1f; --muted: #5f5c55; --line: #d6d2c7; --accent: #8a6a12; color-scheme: light } }
+:root[data-theme="light"] { --bg: #f6f4ef; --surface: #ece9e1; --fg: #1b1b1f; --muted: #5f5c55; --line: #d6d2c7; --accent: #8a6a12; color-scheme: light }
+* { box-sizing: border-box }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 17px; line-height: 1.65; }
+.wrap { max-width: 44rem; margin: 0 auto; padding-inline: 20px; padding-block: 56px 80px; display: flex; flex-direction: column; gap: 56px; }
+.mast { display: flex; flex-direction: column; gap: 14px; }
+.tag { font-family: var(--mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+h1 { font-family: var(--display); font-weight: 800; font-size: clamp(44px, 10vw, 76px); line-height: .95; margin: 0; letter-spacing: -.02em; }
+.lede { font-size: 20px; color: var(--muted); margin: 0; max-width: 34rem; text-wrap: pretty; }
+nav { display: flex; flex-wrap: wrap; gap: 10px 22px; font-family: var(--mono); font-size: 13px; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+.reels { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.reel { background: var(--bg); padding: 16px; display: flex; flex-direction: column; gap: 6px; }
+.reel b { font-family: var(--display); font-weight: 500; font-size: 18px; }
+.reel span { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+h2 { font-family: var(--display); font-weight: 800; font-size: 30px; margin: 0 0 6px; text-wrap: balance; }
+h3 { font-family: var(--display); font-weight: 500; font-size: 19px; margin: 26px 0 4px; }
+section p, section li { max-width: 65ch; }
+section ul { padding-left: 1.2em; }
+.doc { border-top: 1px solid var(--line); padding-top: 32px; }
+.meta { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+footer { font-family: var(--mono); font-size: 12px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 20px; }
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <header class="mast">
+    <span class="tag">Short-form video · Est. 2026</span>
+    <h1>ClipVault</h1>
+    <p class="lede">Dark stories, strange history and facts that sound made up. New vertical shorts every day on YouTube, TikTok and Instagram.</p>
+    <nav aria-label="Pages">
+      <a href="#about">About</a>
+      <a href="#privacy">Privacy Policy</a>
+      <a href="#terms">Terms of Service</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>What we post</h2>
+    <p>ClipVault is an independent channel run from Queensland, Australia. Each video is a short, narrated story or explainer, 30 to 45 seconds long, with captions. We use our own software to write, voice, edit and publish these videos to our own accounts.</p>
+    <div class="reels" role="list">
+      <div class="reel" role="listitem"><b>Horror stories</b><span>first-person, twist endings</span></div>
+      <div class="reel" role="listitem"><b>Dark history</b><span>true, little-known events</span></div>
+      <div class="reel" role="listitem"><b>Mysteries</b><span>unexplained cases</span></div>
+      <div class="reel" role="listitem"><b>Weird facts</b><span>science, space, psychology</span></div>
+    </div>
+    <p>Find us as <b>@clipvault1176</b> on Instagram and TikTok, and as ClipVault1176 on YouTube.</p>
+  </section>
+
+  <section id="privacy" class="doc">
+    <h2>Privacy Policy</h2>
+    <p class="meta">Effective 13 October 2026</p>
+    <p>This policy covers the ClipVault website and the ClipVault publishing software ("the App"), which connects only to ClipVault's own social media accounts.</p>
+    <h3>Who uses the App</h3>
+    <p>The App is used only by the ClipVault account owner to publish videos to accounts they own. It is not offered to the public and does not let other people sign in.</p>
+    <h3>Information we access</h3>
+    <ul>
+      <li>When the account owner connects a platform (TikTok, Instagram or YouTube), the App receives an access token and basic profile details for that account, such as the account ID and username.</li>
+      <li>The App reads publishing options for the account (for example allowed privacy settings) and basic performance figures for our own videos, such as view counts.</li>
+    </ul>
+    <h3>How we use it</h3>
+    <p>Only to upload ClipVault's videos and captions to ClipVault's own accounts and to see how those videos perform. We do not sell, rent or share this information, and we do not use it for advertising.</p>
+    <h3>Storage and security</h3>
+    <p>Access tokens are stored on the account owner's own computer and are never published. They can be revoked at any time from each platform's settings.</p>
+    <h3>Viewers of our videos</h3>
+    <p>We do not collect personal information from people who watch our videos or visit this website. Platforms such as TikTok, Instagram and YouTube handle viewer data under their own privacy policies.</p>
+    <h3>Contact</h3>
+    <p>Questions about this policy: send a direct message to <b>@clipvault1176</b> on Instagram or TikTok.</p>
+  </section>
+
+  <section id="terms" class="doc">
+    <h2>Terms of Service</h2>
+    <p class="meta">Effective 13 October 2026</p>
+    <h3>Use of the App</h3>
+    <p>The ClipVault App is private software used solely by the ClipVault account owner to publish ClipVault's own videos. No one else may use it, and no account is created for anyone else.</p>
+    <h3>Content</h3>
+    <p>ClipVault videos are for entertainment and general information. Horror stories are fiction. Factual videos are researched in good faith, but they are not professional, financial, medical or legal advice.</p>
+    <h3>Platform rules</h3>
+    <p>All content published through the App follows the terms and community guidelines of the platform it is posted on, including TikTok's Terms of Service and Community Guidelines.</p>
+    <h3>Changes</h3>
+    <p>We may update these terms and the privacy policy. The effective date at the top of each document shows the latest version.</p>
+    <h3>Contact</h3>
+    <p>Send a direct message to <b>@clipvault1176</b> on Instagram or TikTok.</p>
+  </section>
+
+  <footer>© 2026 ClipVault · Queensland, Australia</footer>
+</main>
+</body>
+</html>
